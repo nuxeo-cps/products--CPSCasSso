@@ -1,6 +1,12 @@
 ## Script (Python) "logout"
 ##title=Logout handler
 ##parameters=
+
+"""
+Override the CMF logout to clean up Zope session and CAS cookies
+"""
+
+
 REQUEST = context.REQUEST
 if REQUEST.has_key('portal_skin'):
     context.portal_skins.clearSkinCookie()
