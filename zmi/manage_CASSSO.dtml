@@ -1,0 +1,142 @@
+<dtml-var manage_page_header>
+<dtml-var manage_tabs>
+
+This screen gives you the possibility to configure CAS SSO integration.
+<br><br>
+
+<form action="<dtml-var absolute_url>" method="POST">
+
+<B> CAS SSO parameters </B>
+<table cellspacing="0" cellpadding="2" border="0">
+
+
+  <tr>
+    <td align="left" valign="top">
+    <div class="form-label"> SSO WebApp Name :
+    </div>
+    </td>
+    <td align="left" valign="top">
+    <input type="text" name="sso_WebApp" size="40" value="<dtml-var sso_WebApp>"/>
+    </td>
+    <td> (<I> Name of CAS WebApp </I>) </td>
+  </tr>
+
+  <tr>
+    <td align="left" valign="top">
+    <div class="form-label"> SSO ticket key :
+    </div>
+    </td>
+    <td align="left" valign="top">
+    <input type="text" name="sso_ticket" size="40" value="<dtml-var sso_ticket>"/>
+    </td>
+    <td> (<I> QueryString token to get ticket </I>) </td>
+  </tr>
+
+  <tr>
+    <td align="left" valign="top">
+    <div class="form-label"> SSO login service :
+    </div>
+    </td>
+    <td align="left" valign="top">
+    <input type="text" name="sso_login" size="40" value="<dtml-var sso_login>"/>
+    </td>
+    <td> (<I> Name of SSO Login Service </I>) </td>
+  </tr>
+
+  <tr>
+    <td align="left" valign="top">
+    <div class="form-label"> SSO logout service :
+    </div>
+    </td>
+    <td align="left" valign="top">
+    <input type="text" name="sso_logout" size="40" value="<dtml-var sso_logout>"/>
+    </td>
+    <td> (<I> Name of SSO Logout Service </I>) </td>
+  </tr>
+
+  <tr>
+    <td align="left" valign="top">
+    <div class="form-label"> SSO ticket validation service :
+    </div>
+    </td>
+    <td align="left" valign="top">
+    <input type="text" name="sso_validate" size="40" value="<dtml-var sso_validate>"/>
+    </td>
+    <td> (<I> Name of SSO Service used to validate a ticket</I>) </td>
+  </tr>
+
+</table>
+
+<hr>
+<B> Internal CAS Server :</B><br>
+<I> This server is used :
+<UL>
+    <LI> for ticket validation (http access) </LI>
+    <LI> for login redirection when portal is accessed in Intranet Mode (https) </LI>
+</UL></I>
+
+<table cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td align="left" valign="top">
+    <div class="form-label"> Internal SSO Server DNS Name :
+    </div>
+    </td>
+    <td align="left" valign="top">
+    <input type="text" name="sso_server" size="40" value="<dtml-var sso_server>"/>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td align="left" valign="top">
+    <div class="form-label"> Internal SSO Server http port :
+    </div>
+    </td>
+    <td align="left" valign="top">
+    <input type="text" name="sso_httpport" size="6" value="<dtml-var sso_httpport>"/>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="left" valign="top">
+    <div class="form-label"> Internal SSO Server https port :
+    </div>
+    </td>
+    <td align="left" valign="top">
+    <input type="text" name="sso_httpsport" size="6" value="<dtml-var sso_httpsport>"/>
+    </td>
+  </tr>
+
+</table>
+
+<hr>
+<B> External CAS Server </B><br>
+<I> This server is used for login redirection when portal is accessed in Internet Mode (https) </I>
+
+<table cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td align="left" valign="top">
+    <div class="form-label"> External SSO Server DNS Name :
+    </div>
+    </td>
+    <td align="left" valign="top">
+    <input type="text" name="sso_extserver" size="40" value="<dtml-var sso_extserver>"/>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="left" valign="top">
+    <div class="form-label"> External SSO Server https port :
+    </div>
+    </td>
+    <td align="left" valign="top">
+    <input type="text" name="sso_exthttpsport" size="6" value="<dtml-var sso_exthttpsport>"/>
+    </td>
+  </tr>
+
+</table>
+
+<input name="manage_EditSSOParams:method" type="submit" value="Save changes">
+</form>
+
+<dtml-var manage_page_footer>
