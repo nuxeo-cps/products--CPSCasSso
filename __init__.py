@@ -20,8 +20,6 @@
 
 from Products.CMFCore.DirectoryView import registerDirectory
 
-# Allow some methods
-from AccessControl import allow_type, allow_class
 from AccessControl import ModuleSecurityInfo
 
 ModuleSecurityInfo('urllib').declarePublic('quote')

@@ -10,7 +10,7 @@ Cookie Crumbler parameter. """
 
 import urllib
 
-logged_in=context.portal_url() + '/logged_in'
+logged_in = context.portal_url() + '/logged_in'
 if came_from:
     logged_in += "?came_from=%s" % came_from
 
