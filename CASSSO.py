@@ -1,5 +1,6 @@
 # (C) Copyright 2004 Unilog <http://www.unilog.com>
 # (C) Copyright 2004 Capgemini <http://www.capgemini.com>
+# (C) Copyright 2004 Nuxeo <http://www.nuxeo.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License version 2 as published
