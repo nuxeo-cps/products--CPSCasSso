@@ -14,20 +14,26 @@ Sign-On) system by modifying the Cookie Crumbler.
 
 To use CPSCasSso:
 
-- Copy it into your Products directory.
-- Log into the ZMI as manager.
-- Go to your CPS root directory.
-- Create an External Method with the following parameters::
+1. Copy it into your Products directory.
 
-    id            : cassso_install (or whatever)
-    title         : CPS CAS CPS Install (or whatever)
-    Module Name   : CPSCasSso.install
-    Function Name : install
+2. Log into the ZMI as manager.
 
-- Save it.
-- Click on the test tab of this external method.
-- You now have an SSO object in your CPS root. Go there.
-- Set the parameters corresponding to your CAS server and save.
+3. Go to your CPS root directory.
+
+4. Create an External Method with the following parameters::
+
+       id            : cassso_install (or whatever)
+       title         : CPS CAS CPS Install (or whatever)
+       Module Name   : CPSCasSso.install
+       Function Name : install
+
+5. Save it.
+
+6. Click on the test tab of this external method.
+
+7. You now have an SSO object in your CPS root. Go there.
+
+8. Set the parameters corresponding to your CAS server and save.
 
 Note that your CAS server must be accessible via the HTTP/S
 protocol for the users, and HTTP for the CPS.
